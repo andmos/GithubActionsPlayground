@@ -1,0 +1,16 @@
+name: dotnet-script test
+on: [push, pull_request]
+jobs:
+  build_nix:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: master
+    - name: dotnet-script example
+      uses: docker://andmos/dotnet-script:latest
+      with:
+        args: --version
