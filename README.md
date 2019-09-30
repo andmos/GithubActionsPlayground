@@ -1,2 +1,2 @@
 # GithubActionsPlayground
-Playground for Github Actions
+Playground for Github Actions.
