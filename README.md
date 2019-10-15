@@ -1,2 +1,2 @@
 # GithubActionsPlayground
-Playground for Github Actions.
+layground for Github Actions. Used to test different triggers, etc
