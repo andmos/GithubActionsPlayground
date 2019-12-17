@@ -11,6 +11,10 @@ jobs:
       with:
         ref: master
     - run: printenv 
+    - name: Print commits with git rev-list --count HEAD
+      run: echo $(git rev-list --count HEAD)
+    - name: Print commits with git log --pretty=format:'' | wc -l 
+      run: git log --pretty=format:'' | wc -l
     - name: dotnet-script example
       uses: docker://andmos/dotnet-script:latest
       with:
